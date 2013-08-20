@@ -3,15 +3,15 @@ $(document).ready(function() {
     $("p#title").click(function() {
 	$("p#text").fadeToggle();
     });
-    $("input").val('Type an ORCID');
-    $("input").focus(function() {
+    $("input#orcid").val('Type an ORCID');
+    $("input#orcid").focus(function() {
 	if ($(this).val() == 'Type an ORCID') {
 	    $(this).val('');
 	}
     });
     hits = new Array();
     last = '';
-    $("input").keyup(function() {
+    $("input#orcid").keyup(function() {
 	input_string = $(this).val();
 	if (input_string.length == 16) {
 	    if (match = input_string.match(/^([0-9]{15}[0-9Xx])$/)) {
