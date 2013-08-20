@@ -53,6 +53,7 @@ div#container {
 div#share {
     position: absolute;
     margin-left: -140px;
+    width: 50%;
 }
 
 div#orchid {
