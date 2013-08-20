@@ -1,0 +1,73 @@
+html { text-align: center;
+       font-family: "Verdana";
+       font-size: 200%;
+       margin: 40px;
+     }
+
+input { font-size: 150%;
+	width: 12em;
+	color: gray;
+      }
+
+div {
+    display: inline-block;
+    width: 33%;
+}
+
+div#results {
+    min-height: 200px;
+    width: 100%;
+}
+
+div#left {
+    float: left
+}
+
+div#right {
+    float: right;
+}
+
+div#center {
+    position: absolute;
+    min-height: 200px;
+}
+
+div#help {
+    float: none;
+    width: 100%;
+}
+
+img#throbber {
+    margin-bottom: -10px;
+    width: 60px;
+}
+
+img#orchid {
+    width: 200px;
+}
+
+div#container {
+    position: relative;
+}
+
+div#share {
+    position: absolute;
+    margin-left: -140px;
+}
+
+div#orchid {
+    margin-left: -140px;
+    position: absolute;
+    z-index: 100;
+    opacity: 0.3;
+}
+
+a {
+    text-decoration: none;
+}
+
+p#text {
+    text-align: left;
+    font-size: 80%;
+    display: none;
+}
