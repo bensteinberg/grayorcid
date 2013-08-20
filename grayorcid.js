@@ -3,6 +3,11 @@ $(document).ready(function() {
     $("p#title").click(function() {
 	$("p#text").fadeToggle();
     });
+    $("input").focus(function() {
+	if ($(this).val() == 'Type an ORCID') {
+	    $(this).val('');
+	}
+    });
     hits = new Array();
     last = '';
     $("input").keyup(function() {
