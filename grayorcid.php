@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json; charset=utf-8');
 
 $mask = gmp_init("562949953421312", 10);
 
@@ -26,7 +27,8 @@ echo(json_encode($output));
 function get_person($orcid) {
   $data = file_get_contents("http://orcid.org/" . $orcid);
   $DOM = new DOMDocument;
-  $DOM->loadHTML($data);
+  // http://stackoverflow.com/a/8218649
+  $DOM->loadHTML('<?xml encoding="utf-8" ?>' . $data);
   $xpath = new DOMXPath($DOM);
   $tags = $xpath->query('//h2[@class="full-name"]');
   foreach ($tags as $tag) {
